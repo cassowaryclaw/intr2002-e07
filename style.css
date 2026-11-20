@@ -27,5 +27,168 @@
 }
 
 body {
-  /* CODE GOES HERE */
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+#container {
+  width: 100%;
+}
+
+#header {
+  flex-wrap: wrap;
+}
+
+#menu a {
+  white-space: nowrap;
+}
+
+#featured_prev img,
+#featured_next img {
+  width: 14px;
+  height: 14px;
+}
+
+#gallery img {
+  break-inside: avoid;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  #container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  #header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  #header h1 {
+    font-size: 22px;
+  }
+
+  #menu {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  #featured {
+    padding-bottom: 48px;
+  }
+
+  #featured > div:first-child {
+    align-items: flex-start;
+  }
+
+  #featured > div:first-child h1 {
+    font-size: 26px;
+  }
+
+  #slider .relative > div {
+    padding: 16px;
+  }
+
+  #slider .relative > div > div {
+    align-items: flex-end;
+    gap: 12px;
+  }
+
+  #slider .relative > div h1 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  #slider .relative > div h6 {
+    flex-shrink: 0;
+  }
+
+  #about {
+    flex-direction: column;
+    gap: 32px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  #about_left h1 {
+    font-size: 38px;
+  }
+
+  #about_left,
+  #about_right {
+    width: 100%;
+  }
+
+  #gallery > div {
+    columns: 2;
+    column-gap: 16px;
+  }
+
+  #gallery {
+    padding-bottom: 16px;
+  }
+
+  #footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 479px) {
+  #menu {
+    font-size: 10px;
+  }
+
+  #featured > div:first-child {
+    gap: 12px;
+  }
+
+  #featured > div:first-child > div:first-child {
+    min-width: 0;
+  }
+
+  #featured_prev,
+  #featured_next {
+    padding: 9px;
+  }
+
+  #slider .saturate-0 {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  #slider .relative > div {
+    padding: 12px;
+  }
+
+  #slider .relative > div h1 {
+    max-width: 70%;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  #slider .relative > div h6 {
+    max-width: 30%;
+    text-align: right;
+  }
+
+  #slider .relative > div p {
+    margin-top: 4px;
+  }
+
+  #about_left h1 {
+    font-size: 34px;
+  }
+
+  #gallery > div {
+    columns: 1;
+  }
 }
